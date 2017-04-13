@@ -1,20 +1,27 @@
 
 <div class="container">
   <form>
-    <div class="pizzaSize">
-      <h2>Select Pizza Size:</h2>
-      <div ng-repeat="size in menu.pizzaSizes">
-        <input type="radio" name="size" value="{{size}}" ng-model="$parent.pizzaSize">{{size}}
+    <div class="row">
+      <div class="pizzaSize col-md-12">
+        <h2>Select Pizza Size:</h2>
+        <div ng-repeat="size in menu.pizzaSizes">
+          <input type="radio" name="size" value="{{size}}" ng-model="$parent.pizzaSize">{{size}}
+        </div>
       </div>
     </div>
-    <br>
-    <div class="pizzaToppings">
-      <h2>Select your topping:</h2>
 
-      <div ng-repeat="topping in menu.pizzaToppings">
-        <input type="radio" name="topping" value="{{topping}}" ng-model="$parent.pizzaTopping">{{topping}}
+    <div class="row">
+      <div class="pizzaToppings col-md-12">
+        <h2>Select your topping:</h2>
+        <div ng-repeat="topping in menu.pizzaToppings">
+          <input type="radio" name="topping" value="{{topping}}" ng-model="$parent.pizzaTopping">{{topping}}
+        </div>
       </div>
     </div>
-    <button type="button" ng-click="menu.submit(pizzaSize,pizzaTopping)">Add Pizza</button>
+    <div class="row emptyRow">
+    </div>
+    <div class="row">
+      <button type="button" ng-click="menu.submit(pizzaSize,pizzaTopping)">Add Pizza</button>
+    </div>
   </form>
 </div>

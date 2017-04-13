@@ -7,7 +7,6 @@ myApp.factory('PizzaService', function() {
 
   var pizzaOrderObject = {
     orders : [],
-
   };
 
   var confirmedPizzaObject = {
@@ -43,24 +42,20 @@ myApp.factory('PizzaService', function() {
   };
 
   var deleteItem = function(order){
-    // console.log('Delete item' , order);
     var index = pizzaOrderObject.orders.indexOf(order);
     pizzaOrderObject.orders.splice(index,1);
   };
 
   var confirmItem = function(order){
-    // console.log('confirm item' , order.price);
     confirmedPizzaObject.orders.push(order);
     confirmedPizzaObject.total += order.price;
-    // console.log('total' + confirmedPizzaObject.total);
-    //to delele from the orderview
+    //to delele from the order view
     var index = pizzaOrderObject.orders.indexOf(order);
     pizzaOrderObject.orders.splice(index,1);
     console.log('confirm item=' , pizzaOrderObject.orders);
   };
 
   var confirmAll = function() {
-    // console.log('confirming all, number of pizzas is: ' + pizzaOrderObject.orders.length);
     for (var j = 0; j < pizzaOrderObject.orders.length; j++) {
       confirmedPizzaObject.orders.push(pizzaOrderObject.orders[j]);
     }

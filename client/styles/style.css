@@ -1,13 +1,60 @@
-body {
-  padding: 50px;
-  width: 600px;
+.container {
+  width: 100%;
+  height: 100%;
 }
 
-.pizza_nav > ul > li {
-  width: 100px;
-  display: inline-block;
+.header {
+  background-color: OrangeRed;
+  padding-left: 30px;
+  padding-top: 10px;
+  color: WhiteSmoke;
+  height: 70px;
+  text-align: left;
 }
+
+.pizza_nav  {
+  width: 100%;
+  height: 35px;
+  background-color: Silver;
+}
+
+.navOption {
+  margin-left: 28px;
+  width: 100px;
+  height: 30px;
+  background-color: Silver;
+  padding-left: 5px;
+  text-align: left;
+  line-height:30px;
+  float:left;
+}
+
 .orderButtons {
   float: right;
   width:200px;
+}
+
+.emptyRow {
+  height: 20px;
+}
+
+a {
+  font-size: 16px;
+  font-weight: lighter;
+  color: WhiteSmoke;
+}
+
+h1 {
+  font-weight: lighter;
+  font-size: 22px;
+}
+
+h2 {
+  font-weight:400;
+  font-size: 20px;
+}
+
+p {
+  font-weight:200;
+  font-size: 16px;
 }
